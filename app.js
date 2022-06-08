@@ -4,7 +4,7 @@ let message2 = document.querySelector(".mess");
 let submit2 = document.querySelector(".submit2");
 let guess = document.querySelector("#guess");
 
-
+let life = 6;
 
 let randomm = Math.floor(Math.random() * 100 + 1);
 
@@ -12,24 +12,31 @@ let randomm = Math.floor(Math.random() * 100 + 1);
 
 
 submit.addEventListener("click", () => {
-  const count = 5;
+   if (life >= 1){
     let input = document.querySelector("#guess").value;
-        if(input > randomm){
-            message.textContent = "down ⬇️ ";         
+        if(input > randomm){  
+            message.textContent = "down ⬇️ ";  
+            life--   
+            message2.innerHTML = `last ${life} life`;  
             guess.innerHTML = ""; 
         } else if (input < randomm){
             message.textContent = "up ⬆️";
+            life--
+            message2.innerHTML = `last ${life} life`; 
              guess.innerHTML = "";
-        } else {message.textContent = "congrat";
+        } else {message.textContent = " 🎆 congrat 🎆";
                 guess.innerHTML = "";
+                
               }  
-    submit2.value = "";
-    }
+    } else {
+     message2.innerHTML = `Game over...`;  
+  } 
+  } 
+
+
 )
 
 
-window.addEventListener("load", (event) => {
-  submit2.onclick = function () {
-    location.reload(true);
-  };
-});
+window.onload = () => {
+    guess.focus();
+};
