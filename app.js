@@ -1,29 +1,29 @@
 let message = document.querySelector(".message")
 let submit = document.querySelector(".submit");
-let message2 = document.getElementById("mess");
+let message2 = document.querySelector(".mess");
 let submit2 = document.querySelector(".submit2");
-let guess = document.querySelector("guess");
+let guess = document.querySelector("#guess");
+
 
 
 let randomm = Math.floor(Math.random() * 100 + 1);
-console.log(randomm)
 
-const count = 5
+
+
 
 submit.addEventListener("click", () => {
+  const count = 5;
     let input = document.querySelector("#guess").value;
         if(input > randomm){
-            message.textContent = "down ⬇️ ";
-            guess.innerHTML = "";   
-            count--     
-            message2.innerText = `${count}`
+            message.textContent = "down ⬇️ ";         
+            guess.innerHTML = ""; 
         } else if (input < randomm){
             message.textContent = "up ⬆️";
-            guess.innerHTML = "";
-            count--     
-            message2.textContent = `${count}`;  
+             guess.innerHTML = "";
         } else {message.textContent = "congrat";
-                guess.innerHTML = "";}  
+                guess.innerHTML = "";
+              }  
+    submit2.value = "";
     }
 )
 
