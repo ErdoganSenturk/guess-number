@@ -18,12 +18,13 @@ submit.addEventListener("click", () => {
             message.textContent = "down ⬇️ ";  
             life--   
             message2.innerHTML = `last ${life} life`;  
-            guess.innerHTML = ""; 
+            guess.value = ""; 
         } else if (input < randomm){
             message.textContent = "up ⬆️";
             life--
             message2.innerHTML = `last ${life} life`; 
-             guess.innerHTML = "";
+          
+             guess.value = "";
         } else {message.textContent = " 🎆 congrat 🎆";
                 guess.innerHTML = "";
                 
@@ -32,10 +33,10 @@ submit.addEventListener("click", () => {
      message2.innerHTML = `Game over...`;  
   } 
   } 
-
-
 )
-
+submit2.addEventListener("click", () => {
+  document.location.reload(true);
+});
 
 window.onload = () => {
     guess.focus();
