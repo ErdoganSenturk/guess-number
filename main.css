@@ -26,7 +26,7 @@ body{
 }
 
 .h1ust{
-    margin: 1rem;
+    margin: 3rem;
     color: red;
     text-align:center ;
 }
@@ -44,7 +44,7 @@ input{
     font-weight: 700;
 }
 button{
-    margin-top: 1rem;
+    margin-top: 2rem;
     border: 1px solid red;
     border-radius: 5px;
     width: 120px;
