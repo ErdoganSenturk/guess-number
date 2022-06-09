@@ -14,24 +14,23 @@ body{
      background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 45%, rgba(0,212,255,1) 100%); 
 }
 .external {
-    width: 40vw;
-    height: 60vh;
+    width: 50%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     margin: 6rem;
     align-items: center;
-    border: 3px dotted red;
-    border-radius: 20px;
+   
  
 }
 
 .h1ust{
-    margin: 3rem;
+    margin: 2rem;
     color: red;
     text-align:center ;
 }
 .mess, .message {
-    margin: 2rem;
+    margin: 1rem;
     color: red;
     font-size: 24px;
 }
